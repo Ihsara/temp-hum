@@ -39,6 +39,14 @@ void loop()
   Serial.println(results.bits);
   irrecv.resume();
   }
+  if (Serial.available() > 0) {
+        // read the incoming byte:
+        incomingByte = Serial.read();
+
+        // say what you got:
+        Serial.print("I received: ");
+        Serial.println(incomingByte, DEC);
+}
   DHT.read(dht11_data);
   temp=DHT.temperature;
   hum=DHT.humidity;
