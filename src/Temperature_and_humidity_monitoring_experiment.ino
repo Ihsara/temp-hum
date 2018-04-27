@@ -104,6 +104,9 @@ void loop()
   DHT.read(dht11_data);
   temp=DHT.temperature;
   hum=DHT.humidity;
+  lcd.clear();
+  lcd.print(incomingByte); 
+  delay(1000);
   lcd.clear();                   //clear display
   lcd.print("Hum=%");            //display "Hum=%"
   lcd.print(hum);
